@@ -10,7 +10,7 @@ export default function GoalsList( {goalsList} ) {
       return(
         <ul key={id}>
           <li>
-          <GoalItem goalsList={goalsList}/>
+          <GoalItem item={item}/>
           </li>
         </ul>
       )
