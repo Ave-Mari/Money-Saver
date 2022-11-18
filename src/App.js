@@ -9,15 +9,19 @@ import NotFound from './components/NotFound'
 import Layout from "./components/Layout";
 
 
-export default function App() {
 
-  
+
+export default function App() {  
   const [goal, setGoal] = useState({
     title: '',
     total: ''
   })
 
   const [goalsList, setGoalsList] = useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('goalsList', JSON.stringify(goalsList));
+  }, [goalsList]);
 
   
   const inputHandler = (e) => {
@@ -31,12 +35,30 @@ export default function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (goal.title && goal.total) {
-      const newGoal = {...goal, id: new Date().valueOf() };
+      const newGoal = {...goal, id: new Date().valueOf()};
       setGoalsList([...goalsList, newGoal]);
       setGoal({title: '', total: ''});
-      console.log(goalsList)
     }
   }
+
+
+  const addMoney = (id, total, e) => { 
+    const value = e.target.value;
+    goalsList.map((item) => {
+    if (item.id === id) { 
+      const totalNum =  Number(item.total);
+       item.total = totalNum - value;
+    }
+    return item
+    
+   })
+   setGoalsList([...goalsList]);
+}
+
+const removeItem = () => {
+
+}
+
 
   return (
     <>   
@@ -51,7 +73,10 @@ export default function App() {
       <Route index element={<HomePage />}/>
       <Route path="goals-list" element={
       <GoalsList 
+      goal={goal}
       goalsList={goalsList}
+      removeItem={removeItem}
+      addMoney={addMoney}
       />
       }/>
       <Route path="new-goal" element={
@@ -74,5 +99,3 @@ export default function App() {
   )
 }
 
-
-'https://v5.reactrouter.com/web/guides/quick-start'
