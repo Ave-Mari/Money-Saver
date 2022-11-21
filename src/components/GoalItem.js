@@ -10,11 +10,11 @@ export default function GoalItem( { id, total, title, addMoney, removeItem } ) {
       return (
     <>
      <li className='goal-item'>
-      <button
-      onClick={removeItem}
+      <button className='remove-goal-btn'
+      onClick={() => removeItem(id)}
       >✖</button>
-        <p>Моя цель: {title}</p>
-        <p>Осталось собрать: {total}₽</p>
+        <p>Моя цель: <span className='goal-span'>{title}</span> </p>
+        <p>Осталось собрать:  <span className='goal-span'>{total}₽</span></p>
         <input 
        type="button"
        value={1000}
