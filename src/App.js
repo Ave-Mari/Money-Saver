@@ -55,8 +55,9 @@ export default function App() {
    setGoalsList([...goalsList]);
 }
 
-const removeItem = () => {
-
+const removeItem = (id) => {
+  const newGoalsList = goalsList.filter((i) => i.id !== id);
+  setGoalsList(newGoalsList);
 }
 
 
