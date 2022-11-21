@@ -55,3 +55,30 @@ main {
     color: #fff;
     padding: 0.5px 5px;
 }
+
+.goals-list {
+    list-style: none;
+    position: relative;
+    width: 280px;
+    padding: 12px;
+    margin: 0px 0px 22px 0px;
+    border: 3px solid #009b35;
+    border-radius: 8px;
+    background: #faf4d8;
+}
+
+.remove-goal-btn {
+    color: #fff;
+    background: none;
+    border: none;
+    border-radius: 3px;
+    background: #aa2e74;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.goal-span {
+    font-weight: 700;
+}
