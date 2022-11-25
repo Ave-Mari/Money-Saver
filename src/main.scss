@@ -33,6 +33,7 @@ main {
     a {
         text-decoration: none;
         color: #fff;
+        font-size: 20px;
         margin-right: 20px;
         &:last-child {
             margin-right: 0;
@@ -49,17 +50,90 @@ main {
     margin: 0 auto;
 }
 
+.goals-section {
+    width: 88%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .list-number {
     background-color: #eba61d;
     border-radius: 50%;
     color: #fff;
-    padding: 0.5px 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.list-number-zero {
+    background-color: #a1a5e4;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.new-goal-section {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    button {
+    color: #fff;
+    background-color: #009b35;
+    border-radius: 15px;
+    border: none;
+    padding: 6px 4px;
+    width: 160px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+    }
+}
+
+#title-label {
+    display: block;
+}
+#total-label {
+    display: block;
+}
+
+#title-input {
+    padding: 9px;
+    border: none;
+    border-bottom: 2px solid #aa2e74;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: none;
+    font-size: 15px;
+}
+#total-input {
+    padding: 9px;
+    border: none;
+    border-bottom: 2px solid #aa2e74;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: none;
+    font-size: 15px;
 }
 
 .goals-list {
     list-style: none;
     position: relative;
-    width: 280px;
+    width: 320px;
     padding: 12px;
     margin: 0px 0px 22px 0px;
     border: 3px solid #009b35;
@@ -75,10 +149,54 @@ main {
     background: #aa2e74;
     cursor: pointer;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 3%;
+    top: 4%;
 }
 
 .goal-span {
     font-weight: 700;
+    font-size: 21px;
+    
 }
+
+.add-money-btn {
+    color: #fff;
+    background-color: #009b35;
+    border-radius: 15px;
+    border: none;
+    padding: 3px 4px;
+    width: 58px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    margin-right: 3px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #088634;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.add-block {
+    display: flex;
+    align-items: center;
+}
+
+
+.add-text {
+    margin-right: 11px;
+}
+
+ .total-input {
+    background: none;
+    border-bottom: 2px solid #aa2e74;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 78%;
+    padding-left: 16px;
+    font-size: 18px;
+ }
