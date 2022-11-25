@@ -5,10 +5,19 @@ import GoalItem from './GoalItem';
 
 
 
-export default function GoalsList( { goalsList, addMoney, removeItem }) { 
+export default function GoalsList( { 
+  goalsList, 
+  addMoney, 
+  removeItem, 
+  yourTotal,
+  yourTotalHandler,
+  addYourTotal
+}) { 
+  return (
+  <section className='goals-section'>
 
-  
-   return (
+{
+ 
     goalsList.map((item) => {
       const {title, total, id} = item;
       return (
@@ -18,15 +27,19 @@ export default function GoalsList( { goalsList, addMoney, removeItem }) {
             title={title}
             addMoney={addMoney}
             removeItem={removeItem}
+            yourTotal={yourTotal}
             id={id}
+            yourTotalHandler={yourTotalHandler}
+            addYourTotal={addYourTotal}
               />      
           </ul>
       )
       
     })
-   )
    
+   }
   
-
+   </section>
+  )
 }
 
