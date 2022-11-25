@@ -6,7 +6,7 @@ export default function NewGoal( {title, total, inputHandler, handleSubmit} ) {
     <>
     <section className='new-goal-section'>
       <h2>Завести цель</h2>
-      <form onSubmit={handleSubmit}>
+      <form className='form' onSubmit={handleSubmit}>
         <label for="title" id="title-label">
         {/* <span class="label-span">Ваша цель: </span> */}
         <input id="title-input" type="text" name="title" value={title} placeholder="Ваша цель" onChange={inputHandler}/>
