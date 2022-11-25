@@ -19,6 +19,8 @@ export default function App() {
 
   const [goalsList, setGoalsList] = useState([]);
 
+  const [yourTotal, setYourTotal] = useState(0);
+
   useEffect(() => {
     localStorage.setItem('goalsList', JSON.stringify(goalsList));
   }, [goalsList]);
@@ -60,6 +62,24 @@ const removeItem = (id) => {
   setGoalsList(newGoalsList);
 }
 
+const yourTotalHandler = (e) => {
+  const value = e.target.value;
+  setYourTotal(value);
+}
+
+const addYourTotal = (id, total, yourTotal, e, input) => {
+  //надо проверять айди в функции map!!!!!!!!
+  //setInput(true);
+  goalsList.map((item) => {
+    if (yourTotal) {
+      const totalNum =  Number(item.total);
+      item.total = totalNum - yourTotal;
+    }
+    return item;  
+  });  
+  setGoalsList([...goalsList]);
+}
+
 
   return (
     <>   
@@ -78,6 +98,9 @@ const removeItem = (id) => {
       goalsList={goalsList}
       removeItem={removeItem}
       addMoney={addMoney}
+      yourTotal={yourTotal}
+      yourTotalHandler={yourTotalHandler}
+      addYourTotal={addYourTotal}
       />
       }/>
       <Route path="new-goal" element={
@@ -86,6 +109,7 @@ const removeItem = (id) => {
       handleSubmit={handleSubmit} 
       title={goal.title} 
       total={goal.total}
+      
       />
       }/>
       <Route path="*" element={ <NotFound /> }/>
