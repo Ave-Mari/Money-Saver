@@ -25,8 +25,8 @@ export default function GoalItem( {
       <button className='remove-goal-btn'
       onClick={() => removeItem(id)}
       >✖</button>
-        <p>Моя цель: <span className='goal-span'>{title}</span> </p>
-        <p>Осталось собрать:  <span className='goal-span'>{
+        <p className='goal'>Моя цель: <span className='goal-span'>{title}</span> </p>
+        <p className='total'>Осталось собрать:  <span className='goal-span'>{
         total > 0 ? total : '0'
         }
         ₽
