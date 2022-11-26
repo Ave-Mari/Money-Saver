@@ -12,7 +12,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
+    //width: 60%;
     margin: 0 auto;
 }
 
@@ -56,7 +56,7 @@ main {
 }
 
 .goals-section {
-    width: 88%;
+    width: 96%;
     margin:  0 auto;
     display: flex;
     justify-content: space-between;
@@ -144,13 +144,29 @@ main {
 .goals-list {
     list-style: none;
     position: relative;
-    width: 320px;
+    //width: 320px;
+    width: 22.5vw;
     padding: 12px;
     margin: 0px 0px 22px 0px;
     border: 3px solid #009b35;
     border-radius: 8px;
     background: #faf4d8;
 }
+
+.goal {
+    font-size: 1.1vw;
+    span {
+        font-size: 1.2vw;
+    }
+}
+
+.total {
+    font-size: 1.1vw;
+    span {
+        font-size: 1.2vw;
+    }    
+}
+
 
 .remove-goal-btn {
     color: #fff;
@@ -176,9 +192,9 @@ main {
     border-radius: 15px;
     border: none;
     padding: 3px 4px;
-    width: 58px;
+    width: 4vw;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
+    //font-size: 17px;
     margin-right: 3px;
     cursor: pointer;
 
@@ -191,6 +207,10 @@ main {
     }
 }
 
+.add-money-btn[value] {
+    font-size: 1.2vw;
+}
+
 .add-block {
     display: flex;
     align-items: center;
@@ -199,6 +219,11 @@ main {
 
 .add-text {
     margin-right: 11px;
+    font-size: 1.1vw;
+}
+
+.total-btns {
+    margin-right: 3px;
 }
 
  .total-input {
@@ -210,6 +235,33 @@ main {
     width: 78%;
     padding-left: 16px;
     font-size: 18px;
+ }
+
+
+ @media screen and (max-width: 1174px) {
+    .goal {
+        font-size: 1vw;
+        }
+        .goal span {
+        font-size: 1.1vw;
+        }
+        .goals-list {
+        width: 22.2vw;
+        padding: 10px;
+        }
+        .add-money-btn[value] {
+        font-size: 1.1vw;
+        }
+        .total {
+        font-size: 1vw;
+        }
+        .add-text {
+        margin-right: 7px;
+        font-size: 1vw;
+        }
+        
+    
+
  }
 
 @media screen and (max-width: 1027px) {
@@ -230,13 +282,40 @@ main {
         width: 2.1vw;
         height: 2.1vw;
     }
-}
+
+    .goals-list {
+        width: 27.2vw;
+        }
+        .goal {
+        font-size: 1.5vw;
+        }
+        .goal span {
+        font-size: 1.6vw;
+        }
+        .total {
+        font-size: 1.5vw;
+        }
+        .add-text {
+        font-size: 1.5vw;
+        }
+        .add-money-btn[value] {
+        font-size: 1.3vw;
+        }
+        }
+        .total span {
+        font-size: 1.6vw;
+        }
+        .add-money-btn {
+        width: 4.3vw;
+        }
+        
+
 
 
 @media screen and (max-width: 768px) {
     
     main {
-        width: 97%;
+        //width: 97%;
     }
     .route {
         width: 91vw;
@@ -258,5 +337,43 @@ main {
     .list-number {
         width: 2.7vw;
         height: 2.7vw; }
+
+    .goals-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .goals-list {
+        width: 66vw;
+    }
+
+    .goal {
+        font-size: 3.3vw;        
+        span{
+        font-size: 3.5vw;
+
+        }
+    }
+
+    .total {
+        font-size: 3.3vw;        
+        span{
+        font-size: 3.5vw;
+
+        }
+    }
+
+    .add-text {
+        font-size: 3.3vw;
+    }
+
+    .add-money-btn {
+        width: 12.1vw;
+    }
+
+    .add-money-btn[value] {
+        font-size: 3.1vw;
+    }
 
 }
