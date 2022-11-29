@@ -83,7 +83,7 @@ export default function GoalItem( {
        />
         </div>
         :
-        <div>ВЫ НАКОПИЛИ ДЕНЕЖКИ!!! ПОЗДРАВЛЯЮЮЮ!!</div>
+        <div>Вы достигли своей цели!</div>
 
           
         }
