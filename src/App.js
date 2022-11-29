@@ -80,10 +80,12 @@ const addYourTotal = (id, total, yourTotal, e, input) => {
   //надо проверять айди в функции map!!!!!!!!
   //setInput(true);
   goalsList.map((item) => {
+   if (item.id === id) {
     if (yourTotal) {
       const totalNum =  Number(item.total);
       item.total = totalNum - yourTotal;
     }
+   }
     return item;  
   });  
   setGoalsList([...goalsList]);
