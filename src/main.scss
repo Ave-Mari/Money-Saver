@@ -55,6 +55,12 @@ main {
     margin: 0 auto;
 }
 
+.desktop-links {
+    display: block;
+}
+.hamburger {
+    display: none;
+}
 .goals-section {
     width: 96%;
     margin:  0 auto;
@@ -80,8 +86,8 @@ main {
     border-radius: 50%;
     color: #fff;
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 1.6vw;
+    height: 1.6vw;
     text-align: center;
 }
 
@@ -237,6 +243,11 @@ main {
     font-size: 18px;
  }
 
+ .not-found {
+    text-align: center;
+    font-size: 1.5vw;
+ }
+
 
  @media screen and (max-width: 1174px) {
     .goal {
@@ -278,9 +289,9 @@ main {
         }
     }
 
-    .list-number {
-        width: 2.1vw;
-        height: 2.1vw;
+    .list-number, .list-number-zero {
+        width: 1.9vw;
+        height: 1.9vw;
     }
 
     .goals-list {
@@ -318,7 +329,7 @@ main {
         //width: 97%;
     }
     .route {
-        width: 91vw;
+        width: 96vw;
     }
     .header {
         padding: 7px 18px;
@@ -334,7 +345,7 @@ main {
         }
     }
 
-    .list-number {
+    .list-number, .list-number-zero {
         width: 2.7vw;
         height: 2.7vw; }
 
@@ -376,4 +387,45 @@ main {
         font-size: 3.1vw;
     }
 
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .header {
+        justify-content: space-between;
+        padding: 0px 18px;
+        h1 {
+            font-size: 4.9vw;
+        }
+        a {
+            &:hover {
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+            &:active {
+                background-color: #aa2e74;
+            }
+      }
+    }
+
+    .desktop-links {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+
+        span {
+            display: block;
+            width: 19px;
+            height: 2px;
+            background: white;
+            margin-bottom: 3px; 
+            &:last-child {
+                margin-bottom: 0;
+            } 
+        }
+    }
+
+    
 }
