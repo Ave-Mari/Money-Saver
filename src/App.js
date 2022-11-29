@@ -22,6 +22,10 @@ export default function App() {
   const [yourTotal, setYourTotal] = useState(0);
 
   useEffect(() => {
+    return document.title = "Goals"
+ }, []);
+
+  useEffect(() => {
     const data = window.localStorage.getItem('LIST_OF_GOALS');
     setGoalsList(JSON.parse(data));
   }, [])
