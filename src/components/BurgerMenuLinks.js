@@ -7,7 +7,7 @@ export default function BurgerMenuLinks({ goalsList }) {
 
     
   return (
-    <nav>
+    <nav className='nav'>
     <Link to="/">Главная</Link>
       <Link to="goals-list">Мои цели <span className={goalsList.length ? "list-number" : "list-number-zero"}>{lengthSpan}</span></Link>
       <Link to="new-goal">Завести новую цель</Link>
