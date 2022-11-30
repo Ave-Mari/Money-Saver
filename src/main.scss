@@ -425,11 +425,15 @@ main {
                 margin-bottom: 0;
             }
 
-            span {
-                
-            }
         }
     }
+
+    .list-number, .list-number-zero {
+        width: 5.9vw;
+        height: 5.9vw;
+
+    }
+    
 
     .header {
         justify-content: space-between;
