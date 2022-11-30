@@ -19,7 +19,7 @@ export default function Layout({goalsList}) {
       <Link to="goals-list">Мои цели <span className={goalsList.length ? "list-number" : "list-number-zero"}>{lengthSpan}</span></Link>
       <Link to="new-goal">Завести новую цель</Link>
      </div>
-    <button onClick={() => setBurgerMenu(!burgerMenu)}>
+    <button className='hamburger-btn' onClick={() => setBurgerMenu(!burgerMenu)}>
     <a href="#" className='hamburger'>
        <span classname="hamburger-line"></span>
        <span classname="hamburger-line"></span>
