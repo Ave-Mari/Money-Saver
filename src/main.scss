@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 
-//header size going good until 946px
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffeaac;
@@ -12,7 +11,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    //width: 60%;
     margin: 0 auto;
 }
 
@@ -25,11 +23,17 @@ main {
     margin-bottom: 22px;
 
     h1 {
-        //font-size: 33px;
         font-size: 2vw;
         font-weight: 700;
         color: #fff;
         margin-right: 39px;
+
+        -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none;
+            user-select: none;
     }
 
     a {
@@ -46,12 +50,18 @@ main {
             padding-bottom: 3px;
             border-bottom: 3px solid #aa2e74;
         }
+
+        -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none;
+            user-select: none;
     }
 }
 
 .route {
-   // width: 90%;
-   width: 52vw;
+    width: 52vw;
     margin: 0 auto;
 }
 
@@ -74,8 +84,6 @@ main {
     border-radius: 50%;
     color: #fff;
     display: inline-block;
-    //width: 25px;
-    //height: 25px;
     width: 1.6vw;
     height: 1.6vw;
     text-align: center;
@@ -130,8 +138,6 @@ main {
 
 #title-input, #total-input {
     padding: 9px;
-   
-    //border-bottom: 2px solid #aa2e74;
     border: none;
     background: none;
     font-size: 15px;
@@ -171,7 +177,7 @@ main {
 .goals-list {
     list-style: none;
     position: relative;
-    width: 22.5vw;
+    width: 20.5vw;
     padding: 12px;
     margin: 0px 0px 22px 0px;
     border: 3px solid #009b35;
@@ -180,14 +186,14 @@ main {
 }
 
 .goal {
-    font-size: 1.1vw;
+    font-size: 1vw;
     span {
         font-size: 1.2vw;
     }
 }
 
 .total {
-    font-size: 1.1vw;
+    font-size: 1vw;
     span {
         font-size: 1.2vw;
     }    
@@ -214,13 +220,13 @@ main {
 
 .add-money-btn {
     color: #fff;
+    font-size: 1vw;
     background-color: #009b35;
     border-radius: 15px;
     border: none;
     padding: 3px 4px;
     width: 4vw;
     font-family: 'Montserrat', sans-serif;
-    //font-size: 17px;
     margin-right: 3px;
     cursor: pointer;
 
@@ -238,8 +244,8 @@ main {
 }
 
 .add-block {
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
 }
 
 
@@ -250,6 +256,7 @@ main {
 
 .total-btns {
     margin-right: 3px;
+    display: inline;
 }
 
  .total-input {
@@ -305,8 +312,10 @@ main {
     }
 
     .header {
+        
         h1 {
             font-size: 2.4vw;
+            
         }
         a {
             font-size: 1.5vw;
