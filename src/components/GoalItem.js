@@ -36,6 +36,8 @@ export default function GoalItem( {
 
           <div className='add-block'>
         <p className='add-text'>Добавить: </p>
+        <div className='add-wrapper'>
+
         {
           input ?
           <div className="total-input-wrapper">
@@ -87,6 +89,8 @@ export default function GoalItem( {
          
        }}
        />
+     
+        </div>
         </div>
         :
         <div>Вы достигли своей цели!</div>
