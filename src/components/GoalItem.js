@@ -38,12 +38,18 @@ export default function GoalItem( {
         <p className='add-text'>Добавить: </p>
         {
           input ?
-          <div className="total-input">
-          <input 
+          <div className="total-input-wrapper">
+            <label
+            className='your-total-label'
+            >
+            <input 
+          className='your-total-input'
           type="text"
           value={yourTotal}
           onChange={(e) => yourTotalHandler(e)}
           />
+            </label>
+         
         </div>
         :
       <div className='total-btns'>

@@ -126,9 +126,9 @@ main {
     margin-bottom: 22px;
 }
 
-#title-input, #total-input {
+#title-input, #total-input-wrapper {
     padding: 9px;
-    border: none;
+   
     border-bottom: 2px solid #aa2e74;
     border-top: none;
     border-right: none;
@@ -136,8 +136,11 @@ main {
     background: none;
     font-size: 15px;
     font-size: 19px;
-    width: 240px;
+    width: 10vw;
+    padding-bottom: 4px;
+    margin-right: 23px;
 
+    
     &:focus {
         outline: none;
         border: none;
@@ -146,6 +149,29 @@ main {
     }
 }
 
+.your-total-label {
+    border-bottom: 2px solid #aa2e74;
+    width: 12vw;
+    display: inline-block;
+    margin-right: 7px;
+}
+.your-total-input {
+    background: none;
+    border: none;
+    padding: 1px 1px 3px 15px;
+
+    &:focus {
+        outline: none;
+        border: none;
+        //border-bottom: 2px solid #aa2e74;
+    }
+    }
+
+    .your-total-input[type="text"] {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+    }
 
 .goals-list {
     list-style: none;
