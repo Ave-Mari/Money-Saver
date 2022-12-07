@@ -322,6 +322,10 @@ main {
         }
     }
 
+    #title-input, #total-input {
+        width: 31vw;
+    }
+
     .list-number, .list-number-zero {
         width: 1.9vw;
         height: 1.9vw;
@@ -376,6 +380,10 @@ main {
         a {
             font-size: 2.1vw;
         }
+    }
+
+    #title-input, #total-input {
+        width: 44vw;
     }
 
     .list-number, .list-number-zero {
@@ -479,6 +487,14 @@ main {
                 background-color: #aa2e74;
             }
       }
+    }
+
+    .new-goal-section {
+        width: 83%;
+    }
+
+    #title-input, #total-input {
+        width: 65vw;
     }
 
     .desktop-links {
