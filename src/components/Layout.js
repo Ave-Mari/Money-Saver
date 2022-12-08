@@ -10,6 +10,10 @@ export default function Layout({goalsList}) {
   const [burgerMenu, setBurgerMenu] = useState(false);
 
   const lengthSpan = goalsList.length > 0 ? goalsList.length : '0';
+
+  const closeMobileNav = (e) => {
+    setBurgerMenu(false)
+  }
   
   return (
     <>
@@ -29,7 +33,11 @@ export default function Layout({goalsList}) {
     </button>
     </header>
 
-    {burgerMenu ? <BurgerMenuLinks goalsList={goalsList}/> : ''}
+    {burgerMenu ? 
+    <BurgerMenuLinks 
+    goalsList={goalsList} 
+    closeMobileNav={closeMobileNav}
+    /> : ''}
     <Outlet />
 
     <Footer />
