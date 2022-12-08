@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
 import BurgerMenuLinks from './BurgerMenuLinks';
+import Footer from './Footer';
 import './../main.css';
 
 
@@ -30,6 +31,8 @@ export default function Layout({goalsList}) {
 
     {burgerMenu ? <BurgerMenuLinks goalsList={goalsList}/> : ''}
     <Outlet />
+
+    <Footer />
    
     </>
   )
