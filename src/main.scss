@@ -71,6 +71,18 @@ main {
 .hamburger {
     display: none;
 }
+
+
+    .close-nav {
+        background: none;
+        border: none;
+        color: #fff;
+        position: absolute;
+        top: 1%;
+        right: 3%;
+        font-size: 6vw;
+    }
+
 .goals-section {
     width: 96%;
     margin:  0 auto;
