@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NewGoal from './NewGoal';
+import NewGoal from './NewGoal.jsx';
 
 
 

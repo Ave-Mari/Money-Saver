@@ -2,11 +2,11 @@ import React, {useState, useEffect} from "react";
 //import { hot } from 'react-hot-loader/root';
 import { Routes, Route, Link } from "react-router-dom";
 import './main.css';
-import GoalsList from './components/GoalsList'
-import NewGoal from './components/NewGoal'
-import HomePage from './components/HomePage'
-import NotFound from './components/NotFound'
-import Layout from "./components/Layout";
+import GoalsList from './components/GoalsList.jsx'
+import NewGoal from './components/NewGoal.jsx'
+import HomePage from './components/HomePage.jsx'
+import NotFound from './components/NotFound.jsx'
+import Layout from "./components/Layout.jsx"
 
 
 

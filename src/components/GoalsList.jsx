@@ -1,6 +1,6 @@
 import React from 'react';
-import NewGoal from './NewGoal';
-import GoalItem from './GoalItem';
+import NewGoal from './NewGoal.jsx';
+import GoalItem from './GoalItem.jsx'
 
 
 

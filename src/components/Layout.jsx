@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
-import BurgerMenuLinks from './BurgerMenuLinks';
-import Footer from './Footer';
+import BurgerMenuLinks from './BurgerMenuLinks.jsx';
+import Footer from './Footer.jsx';
 import './../main.css';
 
 
