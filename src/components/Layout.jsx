@@ -32,7 +32,7 @@ export default function Layout({goalsList}) {
        <span classname="hamburger-line"></span>
         </a>
     </button>
-    <LanguageSwitcher />
+    {/* <LanguageSwitcher /> */}
     </header>
 
     {burgerMenu ? 
