@@ -21,6 +21,8 @@ export default function App() {
 
   const [yourTotal, setYourTotal] = useState(0);
 
+  const [isRussian, setIsRussian] = useState(true);
+
   useEffect(() => {
     return document.title = "Goals"
  }, []);
