@@ -1,4 +1,3 @@
-
 .switch {
     position: relative;
     display: inline-block;
@@ -18,21 +17,21 @@
     text-align: center;
   }
   
-  input.check-toggle-round-flat:checked ~ .off {
+  input.check-toggle-round-flat:checked ~ .eng {
     color: #aa2e74;
   }
   
-  input.check-toggle-round-flat:checked ~ .on {
+  input.check-toggle-round-flat:checked ~ .ru {
     color: #fff;
   }
   
-  .switch > span.on {
+  .switch > span.ru {
     left: 0;
     padding-left: 2px;
     color: #F36F25;
   }
   
-  .switch > span.off {
+  .switch > span.eng {
     right: 0;
     padding-right: 4px;
     color: #fff;
