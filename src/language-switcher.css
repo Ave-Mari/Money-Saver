@@ -17,21 +17,21 @@
     text-align: center;
   }
   
-  input.check-toggle-round-flat:checked ~ .eng {
+  input.check-toggle-round-flat:checked ~ .ru {
     color: #aa2e74;
   }
   
-  input.check-toggle-round-flat:checked ~ .ru {
+  input.check-toggle-round-flat:checked ~ .eng {
     color: #fff;
   }
   
-  .switch > span.ru {
+  .switch > span.eng {
     left: 0;
     padding-left: 2px;
-    color: #F36F25;
+    color: #aa2e74;
   }
   
-  .switch > span.eng {
+  .switch > span.ru {
     right: 0;
     padding-right: 4px;
     color: #fff;
@@ -39,8 +39,17 @@
   
   .check-toggle {
     position: absolute;
-    margin-left: -9999px;
     visibility: hidden;
+    padding: 13px 30px;
+    border-radius: 52px;
+    width: 98px;
+    height: 35px;
+    transform: translateX(-53px);
+
+/* 
+    position: absolute;
+    margin-left: -9999px;
+    visibility: hidden; */
   }
   .check-toggle + label {
     display: block;
@@ -100,9 +109,21 @@
     transition: margin 0.2s;
   }
   
+  /* input.check-toggle-round-flat[checked = "true"] + label {
+    margin-left: 0;
+}
+
+input.check-toggle-round-fla[checked = "false"] + label:after {
+    margin-left: 44px;
+} */
+
+
+
   input.check-toggle-round-flat:checked + label {
+    
   }
   
   input.check-toggle-round-flat:checked + label:after {
     margin-left: 44px;
   }
+
