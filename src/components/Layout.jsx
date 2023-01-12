@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
 import BurgerMenuLinks from './BurgerMenuLinks.jsx';
 import Footer from './Footer.jsx';
+import LanguageSwitcher from './LanguageSwitcher.jsx'
 import './../main.css';
 
 
@@ -31,6 +32,7 @@ export default function Layout({goalsList}) {
        <span classname="hamburger-line"></span>
         </a>
     </button>
+    <LanguageSwitcher />
     </header>
 
     {burgerMenu ? 
