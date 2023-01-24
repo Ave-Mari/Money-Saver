@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import { Link, Outlet } from "react-router-dom";
 import BurgerMenuLinks from './BurgerMenuLinks.jsx';
 import Footer from './Footer.jsx';
-import LanguageSwitcher from './LanguageSwitcher.jsx'
 import './../main.css';
 
 
-export default function Layout({goalsList}) {
+export default function Layout({goalsList, langChange, isRussian}) {
 
   const [burgerMenu, setBurgerMenu] = useState(false);
 
@@ -19,11 +18,21 @@ export default function Layout({goalsList}) {
   return (
     <>
     <header className="header">  
-    <h1>Копилка 💰</h1> 
+    <h1>
+      {isRussian ? "Копилка 💰" : "Money Saver💰"}
+      </h1> 
     <div className='desktop-links'>
-      <Link to="/">Главная</Link>
-      <Link to="goals-list">Мои цели <span className={goalsList.length ? "list-number" : "list-number-zero"}>{lengthSpan}</span></Link>
-      <Link to="new-goal">Завести новую цель</Link>
+      <Link to="/">
+        {isRussian ? "Главная" : "Home"}
+        </Link>
+      <Link to="goals-list">
+      {isRussian ? "Мои цели" : "My Goals"}
+         <span className={goalsList.length ? "list-number" : "list-number-zero"}>{lengthSpan}
+        </span></Link>
+      <Link to="new-goal">
+      {isRussian ? "Завести новую цель" : "New Goal"}
+        
+        </Link>
      </div>
     <button className='hamburger-btn' onClick={() => setBurgerMenu(!burgerMenu)}>
     <a href="#" className='hamburger'>
@@ -32,7 +41,10 @@ export default function Layout({goalsList}) {
        <span classname="hamburger-line"></span>
         </a>
     </button>
-    {/* <LanguageSwitcher /> */}
+    <span className='lang-btns'>
+      <button onClick={(e) => langChange(e)} value="ru">🇷🇺</button>
+      <button onClick={(e) => langChange(e)} value="eng">🇬🇧</button>
+    </span>
     </header>
 
     {burgerMenu ? 
