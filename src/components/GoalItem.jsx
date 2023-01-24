@@ -31,7 +31,7 @@ export default function GoalItem( {
           </span> 
           </p>
         <p className='total'>
-        {isRussian ? "Осталось собрать:" : "Amount left: "}
+        {isRussian ? "Осталось собрать: " : "Amount left: "}
            
           <span className='goal-span'>
             {
