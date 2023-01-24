@@ -79,8 +79,6 @@ const yourTotalHandler = (e) => {
 }
 
 const addYourTotal = (id, total, yourTotal, e, input) => {
-  //надо проверять айди в функции map!!!!!!!!
-  //setInput(true);
   goalsList.map((item) => {
    if (item.id === id) {
     if (yourTotal) {
@@ -93,6 +91,16 @@ const addYourTotal = (id, total, yourTotal, e, input) => {
   setGoalsList([...goalsList]);
 }
 
+const langChange = (e) => {
+  if (e.target.value === "ru") {
+    setIsRussian(true);
+    console.log("now it is russian")
+  } else {
+    setIsRussian(false);
+    console.log("now it is english")
+  }
+}
+
 
   return (
     <>   
@@ -103,6 +111,8 @@ const addYourTotal = (id, total, yourTotal, e, input) => {
     <Route path="/" element={
     <Layout 
     goalsList={goalsList}
+    langChange={langChange}
+    isRussian={isRussian}
     />}>
       <Route index element={<HomePage />}/>
       <Route path="goals-list" element={
@@ -114,6 +124,7 @@ const addYourTotal = (id, total, yourTotal, e, input) => {
       yourTotal={yourTotal}
       yourTotalHandler={yourTotalHandler}
       addYourTotal={addYourTotal}
+      isRussian={isRussian}
       />
       }/>
       <Route path="new-goal" element={
