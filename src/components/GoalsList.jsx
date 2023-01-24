@@ -11,7 +11,8 @@ export default function GoalsList( {
   removeItem, 
   yourTotal,
   yourTotalHandler,
-  addYourTotal
+  addYourTotal,
+  isRussian
 }) { 
   return (
   <section className='goals-section'>
@@ -31,6 +32,7 @@ export default function GoalsList( {
             id={id}
             yourTotalHandler={yourTotalHandler}
             addYourTotal={addYourTotal}
+            isRussian={isRussian}
               />      
           </ul>
       )

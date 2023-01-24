@@ -13,7 +13,8 @@ export default function GoalItem( {
   removeItem, 
   yourTotal, 
   addYourTotal,
-  yourTotalHandler
+  yourTotalHandler,
+  isRussian
   } ) {
 
     const [input, setInput] = useState(false);
@@ -25,8 +26,16 @@ export default function GoalItem( {
       <button className='remove-goal-btn'
       onClick={() => removeItem(id)}
       >✖</button>
-        <p className='goal'>Моя цель: <span className='goal-span'>{title}</span> </p>
-        <p className='total'>Осталось собрать:  <span className='goal-span'>{
+        <p className='goal'>
+        {isRussian ? "Моя цель: " : "Goal:"}
+          <span className='goal-span'>{title}
+          </span> 
+          </p>
+        <p className='total'>
+        {isRussian ? "Осталось собрать:" : "Amount left:"}
+           
+          <span className='goal-span'>
+            {
         total > 0 ? total : '0'
         }
         ₽
@@ -35,7 +44,9 @@ export default function GoalItem( {
           Number(total) > 0 ?
 
           <div className='add-block'>
-        <p className='add-text'>Добавить: </p>
+        <p className='add-text'>
+        {isRussian ? "Добавить: " : "Add: "}
+          </p>
         <div className='add-wrapper'>
 
         {
