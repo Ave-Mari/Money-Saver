@@ -19,14 +19,14 @@ export default function Layout({goalsList, langChange, isRussian}) {
     <>
     <header className="header">  
     <h1>
-      {isRussian ? "Копилка 💰" : "Money Saver💰"}
+      {isRussian ? "Копилка 💰" : "Money Saver 💰"}
       </h1> 
     <div className='desktop-links'>
       <Link to="/">
         {isRussian ? "Главная" : "Home"}
         </Link>
       <Link to="goals-list">
-      {isRussian ? "Мои цели" : "My Goals"}
+      {isRussian ? "Мои цели " : "My Goals "}
          <span className={goalsList.length ? "list-number" : "list-number-zero"}>{lengthSpan}
         </span></Link>
       <Link to="new-goal">
