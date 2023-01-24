@@ -114,7 +114,7 @@ const langChange = (e) => {
     langChange={langChange}
     isRussian={isRussian}
     />}>
-      <Route index element={<HomePage />}/>
+      <Route index element={<HomePage isRussian={isRussian}/>}/>
       <Route path="goals-list" element={
       <GoalsList 
       goal={goal}
@@ -136,7 +136,7 @@ const langChange = (e) => {
       
       />
       }/>
-      <Route path="*" element={ <NotFound /> }/>
+      <Route path="*" element={ <NotFound isRussian={isRussian}/> }/>
       </Route>
     </Routes>
   </section>
