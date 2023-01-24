@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import './../main.css';
 
 export default function BurgerMenuLinks({ goalsList, closeMobileNav }) {
 
@@ -16,6 +17,10 @@ export default function BurgerMenuLinks({ goalsList, closeMobileNav }) {
     <Link to="/">Главная</Link>
       <Link to="goals-list">Мои цели <span className={goalsList.length ? "list-number" : "list-number-zero"}>{lengthSpan}</span></Link>
       <Link to="new-goal">Завести новую цель</Link>
+      <span className='lang-btns'>
+      <button onClick={(e) => langChange(e)} value="ru">🇷🇺</button>
+      <button onClick={(e) => langChange(e)} value="eng">🇬🇧</button>
+    </span>
     </nav>
   )
 }
