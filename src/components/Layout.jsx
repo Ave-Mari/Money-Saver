@@ -22,14 +22,14 @@ export default function Layout({goalsList, langChange, isRussian}) {
       {isRussian ? "Копилка 💰" : "Money Saver 💰"}
       </h1> 
     <div className='desktop-links'>
-      <Link to="/">
+      <Link to="/" className='menu-elem'>
         {isRussian ? "Главная" : "Home"}
         </Link>
-      <Link to="goals-list">
+      <Link to="goals-list" className='menu-elem'>
       {isRussian ? "Мои цели " : "My Goals "}
          <span className={goalsList.length ? "list-number" : "list-number-zero"}>{lengthSpan}
         </span></Link>
-      <Link to="new-goal">
+      <Link to="new-goal" className='menu-elem' >
       {isRussian ? "Завести новую цель" : "New Goal"}
         
         </Link>
@@ -41,7 +41,7 @@ export default function Layout({goalsList, langChange, isRussian}) {
        <span classname="hamburger-line"></span>
         </a>
     </button>
-    <span className='lang-btns'>
+    <span className='lang-btns menu-elem'>
       <button onClick={(e) => langChange(e)} value="ru">🇷🇺</button>
       <button onClick={(e) => langChange(e)} value="eng">🇬🇧</button>
     </span>
@@ -51,7 +51,7 @@ export default function Layout({goalsList, langChange, isRussian}) {
     <BurgerMenuLinks 
     goalsList={goalsList} 
     closeMobileNav={closeMobileNav}
-    /> : ''}
+    /> : null}
     <Outlet />
 
     <Footer />
