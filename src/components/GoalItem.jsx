@@ -17,8 +17,7 @@ export default function GoalItem( {
   isRussian
   } ) {
 
-    const [input, setInput] = useState(false);
-  
+    const [input, setInput] = useState(false);  
 
       return (
     <>
@@ -27,12 +26,12 @@ export default function GoalItem( {
       onClick={() => removeItem(id)}
       >✖</button>
         <p className='goal'>
-        {isRussian ? "Моя цель: " : "Goal:"}
+        {isRussian ? "Моя цель: " : "Goal: "}
           <span className='goal-span'>{title}
           </span> 
           </p>
         <p className='total'>
-        {isRussian ? "Осталось собрать:" : "Amount left:"}
+        {isRussian ? "Осталось собрать:" : "Amount left: "}
            
           <span className='goal-span'>
             {
