@@ -549,6 +549,32 @@ main {
       }
     }
 
+    .lang-btns {
+        display: none;
+    }
+
+    .lang-btns-mobile {
+
+        display: flex;
+        width: 35vw;
+        justify-content: space-around;
+        margin: 0 auto;
+        button {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: none;
+            padding: 7px 11px;
+            font-size: 5.4vw;
+            background: #a9d825;
+            cursor: pointer;
+    
+            &:hover {
+                background: #88b118;
+            }
+        }
+    }
+
     .new-goal-section {
         width: 83%;
     }

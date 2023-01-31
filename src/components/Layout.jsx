@@ -5,7 +5,7 @@ import Footer from './Footer.jsx';
 import './../main.css';
 
 
-export default function Layout({goalsList, langChange, isRussian}) {
+export default function Layout({goalsList, langChange, isRussian }) {
 
   const [burgerMenu, setBurgerMenu] = useState(false);
 
@@ -34,6 +34,10 @@ export default function Layout({goalsList, langChange, isRussian}) {
         
         </Link>
      </div>
+     <span className='lang-btns menu-elem'>
+      <button onClick={(e) => langChange(e)} value="ru">🇷🇺</button>
+      <button onClick={(e) => langChange(e)} value="eng">🇬🇧</button>
+    </span>
     <button className='hamburger-btn' onClick={() => setBurgerMenu(!burgerMenu)}>
     <a href="#" className='hamburger'>
        <span classname="hamburger-line"></span>
@@ -41,16 +45,13 @@ export default function Layout({goalsList, langChange, isRussian}) {
        <span classname="hamburger-line"></span>
         </a>
     </button>
-    <span className='lang-btns menu-elem'>
-      <button onClick={(e) => langChange(e)} value="ru">🇷🇺</button>
-      <button onClick={(e) => langChange(e)} value="eng">🇬🇧</button>
-    </span>
     </header>
 
     {burgerMenu ? 
     <BurgerMenuLinks 
     goalsList={goalsList} 
     closeMobileNav={closeMobileNav}
+    langChange={langChange}
     /> : null}
     <Outlet />
 
