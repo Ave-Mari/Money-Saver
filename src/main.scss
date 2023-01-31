@@ -178,11 +178,12 @@ main {
 
 .your-total-label {
     border-bottom: 2px solid #aa2e74;
-    width: 12vw;
+    
     display: inline-block;
     margin-right: 7px;
 }
 .your-total-input {
+    width: 12vw;
     background: none;
     border: none;
     padding: 1px 1px 3px 15px;
@@ -486,6 +487,10 @@ main {
 
     .add-money-btn[value] {
         font-size: 3.1vw;
+    }
+
+    .your-total-input {
+        width: 39vw;
     }
 
 }
