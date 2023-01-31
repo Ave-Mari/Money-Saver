@@ -131,6 +131,7 @@ const langChange = (e) => {
       <NewGoal 
       inputHandler={inputHandler} 
       handleSubmit={handleSubmit} 
+      isRussian={isRussian}
       title={goal.title} 
       total={goal.total}
       
