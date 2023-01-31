@@ -35,7 +35,7 @@ export default function GoalItem( {
            
           <span className='goal-span'>
             {
-        total > 0 ? total : '0'
+        total > 0 ? total : null
         }
         ₽
         </span></p>
