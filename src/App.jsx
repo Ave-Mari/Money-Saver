@@ -41,7 +41,9 @@ export default function App() {
     const name = e.target.name;
     const value = e.target.value;
 
-    setGoal({...goal, [name]:value});
+    const currency = isRussian ? "₽" : "$";
+
+    setGoal({...goal, [name]:value, currency: currency});
   }
 
 
@@ -94,10 +96,8 @@ const addYourTotal = (id, total, yourTotal, e, input) => {
 const langChange = (e) => {
   if (e.target.value === "ru") {
     setIsRussian(true);
-    console.log("now it is russian")
   } else {
     setIsRussian(false);
-    console.log("now it is english")
   }
 }
 
