@@ -20,12 +20,13 @@ export default function GoalsList( {
 {
  
     goalsList.map((item) => {
-      const {title, total, id} = item;
+      const {title, total, currency, id} = item;
       return (
           <ul className="goals-list" key={id}>
             <GoalItem 
             total={total}
             title={title}
+            currency={currency}
             addMoney={addMoney}
             removeItem={removeItem}
             yourTotal={yourTotal}

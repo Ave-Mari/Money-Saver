@@ -16,7 +16,7 @@ export default function NewGoal( {title, total, inputHandler, handleSubmit, isRu
       
       <label for="total" id="total-label">
       {/* <span class="label-span">Сумма: </span> */}
-      <input id="total-input" type="text" name="total" value={total} placeholder={isRussian ? 'Сумма' : 'Amount'} pattern="[0-9]+" onChange={inputHandler}/>
+      <input id="total-input" type="text" name="total" value={total} placeholder={isRussian ? 'Сумма (₽)' : 'Amount ($)'} pattern="[0-9]+" onChange={inputHandler}/>
         </label>
       
       <button>

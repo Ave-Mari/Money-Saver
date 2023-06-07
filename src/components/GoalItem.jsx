@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import NewGoal from './NewGoal.jsx';
 
-
-
-
-
 export default function GoalItem( { 
   id,
   total, 
   title, 
+  currency,
   addMoney, 
   removeItem, 
   yourTotal, 
@@ -35,9 +32,8 @@ export default function GoalItem( {
            
           <span className='goal-span'>
             {
-        total > 0 ? total : null
+        total > 0 ? total + " " + currency : "0 " + currency
         }
-        ₽
         </span></p>
         {
           Number(total) > 0 ?
@@ -68,6 +64,12 @@ export default function GoalItem( {
         <input 
        className='add-money-btn'
        type="button"
+       value={500}
+       onClick={(e) => addMoney(id, total, e)}
+       />
+        <input 
+       className='add-money-btn'
+       type="button"
        value={1000}
        onClick={(e) => addMoney(id, total, e)}
        />
@@ -75,12 +77,6 @@ export default function GoalItem( {
        className='add-money-btn'
        type="button"
        value={5000}
-       onClick={(e) => addMoney(id, total, e)}
-       />
-        <input 
-       className='add-money-btn'
-       type="button"
-       value={10000}
        onClick={(e) => addMoney(id, total, e)}
        />
         </div>
@@ -103,7 +99,7 @@ export default function GoalItem( {
         </div>
         </div>
         :
-        <div>Вы достигли своей цели!</div>
+        <div>{isRussian ? "Вы достигли своей цели!" : "You've finished your goal!"}</div>
 
           
         }
