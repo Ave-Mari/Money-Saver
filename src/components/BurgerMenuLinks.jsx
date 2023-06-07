@@ -19,7 +19,7 @@ export default function BurgerMenuLinks({ goalsList, closeMobileNav, langChange 
       <Link to="new-goal">Завести новую цель</Link>
       <div className='lang-btns-mobile'>
       <button onClick={(e) => langChange(e)} value="ru">🇷🇺</button>
-      <button onClick={(e) => langChange(e)} value="eng">🇬🇧</button>
+      <button onClick={(e) => langChange(e)} value="eng">🇺🇸</button>
     </div>
     </nav>
   )

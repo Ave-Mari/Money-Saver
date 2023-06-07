@@ -36,7 +36,7 @@ export default function Layout({goalsList, langChange, isRussian }) {
      </div>
      <span className='lang-btns menu-elem'>
       <button onClick={(e) => langChange(e)} value="ru">🇷🇺</button>
-      <button onClick={(e) => langChange(e)} value="eng">🇬🇧</button>
+      <button onClick={(e) => langChange(e)} value="eng">🇺🇸</button>
     </span>
     <button className='hamburger-btn' onClick={() => setBurgerMenu(!burgerMenu)}>
     <a href="#" className='hamburger'>
