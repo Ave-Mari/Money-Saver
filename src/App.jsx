@@ -24,7 +24,7 @@ export default function App() {
   const [isRussian, setIsRussian] = useState(true);
 
   useEffect(() => {
-    return document.title = "Goals"
+    return document.title = "Money Saver"
  }, []);
 
   useEffect(() => {
