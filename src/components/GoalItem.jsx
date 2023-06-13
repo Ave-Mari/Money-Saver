@@ -64,19 +64,19 @@ export default function GoalItem( {
         <input 
        className='add-money-btn'
        type="button"
-       value={500}
+       value={isRussian ? 500 : 50}
        onClick={(e) => addMoney(id, total, e)}
        />
         <input 
        className='add-money-btn'
        type="button"
-       value={1000}
+       value={isRussian ? 1000 : 100}
        onClick={(e) => addMoney(id, total, e)}
        />
         <input 
        className='add-money-btn'
        type="button"
-       value={5000}
+       value={isRussian ? 5000 : 500}
        onClick={(e) => addMoney(id, total, e)}
        />
         </div>
