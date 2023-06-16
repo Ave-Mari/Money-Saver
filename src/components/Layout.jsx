@@ -49,6 +49,7 @@ export default function Layout({goalsList, langChange, isRussian }) {
 
     {burgerMenu ? 
     <BurgerMenuLinks 
+    isRussian={isRussian}
     goalsList={goalsList} 
     closeMobileNav={closeMobileNav}
     langChange={langChange}
