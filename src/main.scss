@@ -153,6 +153,23 @@ main {
         justify-content: space-between;
         margin-bottom: 18px;
         font-size: 27px;
+        color: #fff;
+    }
+
+    .radio {
+        border-radius: 22px;
+        width: 31%;
+        background-color: #009b35; 
+        cursor: pointer; 
+
+        &:hover {
+            background-color: #006121; 
+        }
+    }
+
+    #currency-1, #currency-2 {
+        opacity: 0;
+        width: 1px;
     }
     
 }
