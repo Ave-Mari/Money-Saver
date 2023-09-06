@@ -32,7 +32,7 @@ export default function GoalItem( {
            
           <span className='goal-span'>
             {
-        total > 0 ? total + " " + currency : "0 " + currency
+            total > 0 ? total + " " + currency : "0 " + currency
         }
         </span></p>
         {
@@ -64,19 +64,19 @@ export default function GoalItem( {
         <input 
        className='add-money-btn'
        type="button"
-       value={isRussian ? 500 : 50}
+       value={currency === "₽" ? 500 : 50}
        onClick={(e) => addMoney(id, total, e)}
        />
         <input 
        className='add-money-btn'
        type="button"
-       value={isRussian ? 1000 : 100}
+       value={currency === "₽" ? 1000 : 100}
        onClick={(e) => addMoney(id, total, e)}
        />
         <input 
        className='add-money-btn'
        type="button"
-       value={isRussian ? 5000 : 500}
+       value={currency === "₽" ? 5000 : 500}
        onClick={(e) => addMoney(id, total, e)}
        />
         </div>
