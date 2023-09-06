@@ -34,7 +34,7 @@ export default function GoalsList( {
             yourTotalHandler={yourTotalHandler}
             addYourTotal={addYourTotal}
             isRussian={isRussian}
-              />      
+            />      
           </ul>
       )
       
