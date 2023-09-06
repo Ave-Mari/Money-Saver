@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from "react";
-//import { hot } from 'react-hot-loader/root';
+import React, {useState, useEffect, useContext, createContext} from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import './main.css';
 import GoalsList from './components/GoalsList.jsx'
@@ -9,11 +8,10 @@ import NotFound from './components/NotFound.jsx'
 import Layout from "./components/Layout.jsx"
 
 
-
-
 export default function App() {  
   const [goal, setGoal] = useState({
     title: '',
+    currency: '',
     total: ''
   })
 
@@ -22,7 +20,7 @@ export default function App() {
   const [yourTotal, setYourTotal] = useState(0);
 
   const [isRussian, setIsRussian] = useState(true);
-
+  
   useEffect(() => {
     return document.title = "Money Saver"
  }, []);
@@ -36,23 +34,22 @@ export default function App() {
     window.localStorage.setItem('LIST_OF_GOALS', JSON.stringify(goalsList));
   }, [goalsList]);
 
+ 
   
   const inputHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
-    const currency = isRussian ? "₽" : "$";
-
-    setGoal({...goal, [name]:value, currency: currency});
+    setGoal({...goal, [name]: value });
   }
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (goal.title && goal.total) {
+    if (goal.title && goal.total && goal.currency) {
       const newGoal = {...goal, id: new Date().valueOf()};
       setGoalsList([...goalsList, newGoal]);
-      setGoal({title: '', total: ''});
+      setGoal({title: '', total: '', currency: ''});
     }
   }
 
@@ -133,17 +130,14 @@ const langChange = (e) => {
       handleSubmit={handleSubmit} 
       isRussian={isRussian}
       title={goal.title} 
-      total={goal.total}
-      
-      />
+      total={goal.total}      
+      />  
+    
       }/>
       <Route path="*" element={ <NotFound isRussian={isRussian}/> }/>
       </Route>
     </Routes>
-  </section>
-
-   
-    
+      </section>    
     </main>
     </>
   )
