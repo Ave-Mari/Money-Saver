@@ -146,6 +146,15 @@ main {
     font-size: 17px;
     cursor: pointer;
     }
+
+    .currency-radio-btns {
+        width: 46%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 18px;
+        font-size: 27px;
+    }
+    
 }
 
 .form {
@@ -175,6 +184,7 @@ main {
         background: #faf4d8;
     }
 }
+
 
 .your-total-label {
     border-bottom: 2px solid #aa2e74;
