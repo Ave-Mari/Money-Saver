@@ -40,9 +40,9 @@ export default function Layout({goalsList, langChange, isRussian }) {
     </span>
     <button className='hamburger-btn' onClick={() => setBurgerMenu(!burgerMenu)}>
     <a href="#" className='hamburger'>
-       <span classname="hamburger-line"></span>
-       <span classname="hamburger-line"></span>
-       <span classname="hamburger-line"></span>
+       <span className="hamburger-line"></span>
+       <span className="hamburger-line"></span>
+       <span className="hamburger-line"></span>
         </a>
     </button>
     </header>
